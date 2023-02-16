@@ -3,7 +3,7 @@ const Products = require('../models/product.models')
 
 
 const getProduct = (req, res)=>{
-    Products.findbyId({_id: req.params.id})
+    Products.findById({_id: req.params.id})
     .then((resultado)=>{
         res.json(resultado)
     }).catch((error)=>{
