@@ -17,7 +17,6 @@ const ProductForm = () => {
 
     }).then((res)=>{
         console.log(res, "LLega por THEN");
-        //navigate('/todaseries')
     }).catch((err)=>{
         console.log(err, "LLEGA POR CATCH")
         setErrors(err.response.data.errors)
@@ -34,7 +33,7 @@ const ProductForm = () => {
         <input type="number" className='form-control'  onChange={(e)=>setPrice(e.target.value)}></input>
         <label htmlFor='' className='form-label'> Description:</label>
         <input type="text" className='form-control'  onChange={(e)=>setDescription(e.target.value)}></input>
-        <button className='btn btn-success mt-3'> Crear Serie</button>
+        <button className='btn btn-success mt-3'> Crear Product</button>
       </form>
   </div>
   )
